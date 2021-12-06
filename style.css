@@ -1,0 +1,594 @@
+body{ 
+    color: black;
+    background-color: rgb(243, 228, 210);
+}
+
+img{
+    width: 400px;
+    height: 300px;
+    margin: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 50%;
+}
+
+p{
+    color: #b98f68;
+    line-height: 0.1;
+    font-family:'Lucida Grande';
+    font-weight: bold;
+    font-size: 40px;
+    text-align:center;
+}
+
+h2{
+    color:burlywood;
+    border: 5px burlywood;  
+    line-height: 0.1;
+    font-family:'Lucida Grande';
+    font-size: 18px;
+    text-align: center;
+}
+
+a{
+    display: table-row;
+    color: rgb(255, 255, 255);
+    font-family:'Lucida Grande';
+    padding: 8px 16x;
+    line-height: 1.5;
+    background-color: rgb(218, 175, 120);
+    font-family:'Lucida Grande';
+    text-align: left;
+}
+.topnav {
+    overflow: hidden;
+    background-color: rgb(218, 175, 120);
+  }
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 9px 16px;
+    text-decoration: none;
+  }
+  
+.topnav a:hover {
+    background-color: rgb(187, 146, 93);
+    color: black;
+}
+
+h3{
+    color: black;
+    font-family: 'Lucida Grande';
+    text-align: right;
+    font-weight: 200;
+}
+
+/* Parent Container */
+.content_img{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    float: left;
+    margin-right: 10px;
+   }
+   
+   /* Child Text Container */
+   .content_img div{
+    position: absolute;
+    bottom: 40%;
+    right: 40%;
+    background: rgb(32, 32, 32);
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'Lucida Grande';
+    font-size: x-large;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+   }
+   
+   /* Hover on Parent Container */
+   .content_img:hover{
+    cursor:default;
+    color: burlywood;
+   }
+   
+   .content_img:hover div{
+    width: 800px;
+    padding: 8px 13px;
+    visibility: visible;
+    opacity: 0.7; 
+   }
+
+h3{
+    color:rgb(207, 169, 118);
+    border: 5px burlywood;  
+    line-height: 0.1;
+    font-family:'Lucida Grande';
+    font-size: 20px;
+    font-weight: 650;
+    text-align: center;
+}
+
+.desc{
+    font-family:'Lucida Grande';
+}
+
+.flex-container {
+    display: flex;
+    margin: 30px;
+    line-height: 2;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid burlywood;
+    border-radius: 0px;
+}  
+
+.flex-child:first-child {
+    margin-right: 50px;
+} 
+
+h4{
+    color:rgb(0, 0, 0);
+    border: 5px burlywood;  
+    line-height: 0.1;
+    font-family:'Lucida Grande';
+    font-size: 20px;
+    font-weight: 650;
+    text-align: center;
+}
+
+label {
+    position: relative;
+    margin-left: 2px; /* to contain absolute elements */
+    padding-left:30px; /* free space for custom checkbox */
+    cursor: pointer;
+  }
+  /* hide default checkbox  */
+  label input[type=checkbox] {
+    position: absolute; /* prevent taking any space */
+    /* cross-browser hidingg */
+    opacity: 0;
+    width:0; 
+    height:0;
+  }
+  /* custom checkbox */
+  label span {
+    position: absolute;
+    /* position to the free space in <label> */
+    top:0;
+    left:0;
+    width:20px; 
+    height:20px;
+    background-color: rgb(240, 240, 240);
+    transition: .3s background-color; /* slight transition */
+  }
+  /* the check icon */
+  label span:after {
+    content: "";
+    position: absolute;
+    display: none;
+    
+    /* check icon */
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  label:hover span {
+    background-color: #ccc;
+  }
+  
+  /**** Here's the trick ***/
+  label input:checked ~ span {
+    background-color: rgb(240, 164, 50);
+  }
+  label input:checked ~ span:after {
+    display:block;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  input {
+    display:block;
+    text-align: center;
+    width:80%;
+    margin:10px 0;
+    margin-left: 5px;
+    padding:10px;
+  }
+  .type-1 {
+    border-radius:30px;
+    border: 1px solid #eee;
+    margin: 30px;
+    margin-top: 20px;
+    transition: .3s border-color rgb(223, 177, 116)
+  }
+  .type-1:hover {
+    border: 1px solid #aaa;
+  }
+
+  input[type=submit] {
+    background-color: rgb(197, 147, 82);
+    text-align: center;
+    object-position: center;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin: 55px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: rgb(240, 164, 50);
+  }
+
+  /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 50%; /* Full width */
+  font-family: 'Lucida Grande';
+  padding: 12px; /* Some padding */ 
+  border: 1px solid rgb(214, 185, 146); /* Gray border */
+  border-radius: 30px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: rgb(197, 147, 82);
+  color: white;
+  width: 50%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: rgb(240, 164, 50);
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: rgb(224, 213, 199);
+  padding: 20px;
+}
+
+
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "PT Sans", sans-serif;
+  color: #262626;
+  background-color: #f5f4f3; }
+
+a {
+  color: #f42e4e;
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+header {
+  height: 170px;
+  line-height: 170px;
+  text-align: center;
+  background: #513e5d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  header h1 {
+    font-size: 2rem;
+    color: #f5f4f3; }
+  @media only screen and (min-width: 768px) {
+    header {
+      height: 200px;
+      line-height: 200px; }
+      header h1 {
+        font-size: 2.6rem; } }
+
+.cd-single-item {
+  position: relative;
+  background: #f5f4f3; }
+
+.cd-slider-wrapper {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: width 0.4s;
+  -moz-transition: width 0.4s;
+  transition: width 0.4s;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: width; }
+  @media only screen and (min-width: 1024px) {
+    .cd-slider-wrapper {
+      width: 50%; }
+      .cd-slider-active .cd-slider-wrapper {
+        width: 100%; } }
+
+.cd-slider {
+  position: relative;
+  z-index: 1;
+  overflow: hidden; }
+  .cd-slider::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'mobile';
+    display: none; }
+  .cd-slider li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s; }
+    .cd-slider li img {
+      display: block;
+      width: 100%; }
+    .cd-slider li.selected {
+      position: relative;
+      z-index: 2;
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0); }
+    .cd-slider li.move-left {
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%); }
+  @media only screen and (min-width: 1024px) {
+    .cd-slider {
+      cursor: pointer; }
+      .cd-slider::before {
+        /* never visible - this is used in jQuery to check the current MQ */
+        content: 'desktop'; }
+      .cd-slider::after {
+        /* slider cover layer - to indicate the image is clickable */
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(81, 62, 93, 0.4) url("../img/cd-icon-zoom.svg") no-repeat center center;
+        /* size of the icon */
+        background-size: 48px;
+        opacity: 0;
+        z-index: 4;
+        -webkit-transition: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        transition: opacity 0.2s; }
+      .no-touch .cd-slider:hover::after {
+        opacity: 1; }
+      .cd-slider-active .cd-slider {
+        cursor: auto; }
+        .cd-slider-active .cd-slider::after {
+          display: none; } }
+
+@media only screen and (min-width: 1024px) {
+  .cd-slider-navigation li, .cd-slider-pagination {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.4s 0s, visibility 0s 0.4s;
+    -moz-transition: opacity 0.4s 0s, visibility 0s 0.4s;
+    transition: opacity 0.4s 0s, visibility 0s 0.4s; }
+    .cd-slider-active .cd-slider-navigation li, .cd-slider-active .cd-slider-pagination {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.4s;
+      -moz-transition: opacity 0.4s 0.4s, visibility 0s 0.4s;
+      transition: opacity 0.4s 0.4s, visibility 0s 0.4s; } }
+.cd-slider-navigation li {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .cd-slider-navigation li:first-of-type {
+    left: 10px; }
+  .cd-slider-navigation li:last-of-type {
+    right: 10px; }
+  .cd-slider-navigation li a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url("../img/cd-icon-arrow.svg") no-repeat center center;
+    -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
+    -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
+    transition: opacity 0.2s 0s, visibility 0s 0s;
+    /* image replacement */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap; }
+    .cd-slider-navigation li a.inactive {
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+      -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+      transition: opacity 0.2s 0s, visibility 0s 0.2s; }
+    .no-touch .cd-slider-navigation li a:hover {
+      opacity: .7; }
+  .cd-slider-navigation li:first-of-type a {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  @media only screen and (min-width: 1024px) {
+    .cd-slider-navigation li:first-child {
+      left: 30px; }
+    .cd-slider-navigation li:last-child {
+      right: 30px; } }
+
+.cd-slider-pagination {
+  /* you won't see this element in the html but it will be created using jQuery */
+  position: absolute;
+  z-index: 2;
+  bottom: 30px;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  visibility: hidden; }
+  .cd-slider-pagination:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .touch .cd-slider-pagination {
+    visibility: hidden; }
+  .cd-slider-pagination li {
+    display: inline-block;
+    float: left;
+    margin: 0 5px; }
+    .cd-slider-pagination li.selected a {
+      background: #f5f4f3; }
+  .cd-slider-pagination a {
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #f5f4f3;
+    /* fix a bug in IE9/10 - transparent anchor not clickable */
+    background-color: rgba(255, 255, 255, 0);
+    /* image replacement */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap; }
+
+.cd-slider-wrapper .cd-close {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: url("../img/cd-icon-close.svg") no-repeat center center;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.4s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.4s;
+  transition: transform 0.3s 0s, visibility 0s 0.4s; }
+  .cd-slider-active .cd-slider-wrapper .cd-close {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.4s 0.4s;
+    -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.4s 0.4s;
+    transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.4s 0.4s; }
+  .no-touch .cd-slider-active .cd-slider-wrapper .cd-close:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+  @media only screen and (min-width: 1024px) {
+    .cd-slider-wrapper .cd-close {
+      display: block; } }
+
+.cd-item-info {
+  padding: 50px 5%; }
+  .cd-item-info h2, .cd-item-info p {
+    max-width: 480px; }
+  .cd-item-info h2 {
+    font-size: 2.4rem;
+    font-weight: bold; }
+  .cd-item-info p {
+    line-height: 1.6;
+    margin: 1em 0;
+    color: #666666; }
+  .cd-item-info .add-to-cart {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: none;
+    padding: .8em 1.6em;
+    background-color: rgb(245, 179, 79);
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px; }
+  @media only screen and (min-width: 1024px) {
+    .cd-item-info {
+      position: absolute;
+      width: 50%;
+      top: 0;
+      right: 0;
+      padding: 60px 60px 0;
+      margin: 0; } }
+      .cd-item-info .add-to-cart:hover {
+        background-color: rgb(240, 164, 50);
+      }
+
+.cd-content p {
+  width: 90%;
+  max-width: 768px;
+  padding: 4em 0;
+  margin: 0 auto;
+  color: #afa8a0;
+  line-height: 1.8; }
